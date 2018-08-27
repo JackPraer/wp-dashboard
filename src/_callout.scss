@@ -1,0 +1,29 @@
+.bd-callout {
+    padding: 0.5rem;
+    border-left: .25rem solid $dark;
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+    background: #fff;
+}
+
+.bd-callout h4 {
+    margin-top: 0;
+    margin-bottom: .25rem
+}
+
+.bd-callout p:last-child {
+    margin-bottom: 0
+}
+
+.bd-callout+.bd-callout {
+    margin-top: 1rem
+}
+
+@each $color, $value in $theme-colors {
+  .bd-callout-#{$color} {
+   border-left-color: $value;
+    
+    h4 {
+      color: $value;
+    }
+  }
+}

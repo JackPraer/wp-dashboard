@@ -1,0 +1,71 @@
+$blue:    #0073aa ;
+$indigo:  #6610f2 ;
+$purple:  #6f42c1 ;
+$pink:    #e83e8c ;
+$red:     #dc3232 ;
+$orange:  #fd7e14 ;
+$yellow:  #ffba00 ;
+$green:   #46b450 ;
+$teal:    #20c997 ;
+$cyan:    #00b9eb ;
+
+$primary:       #0085ba;
+$secondary:     #9ca1a6;
+$success:       $green;
+$info:          $cyan ;
+$warning:       $yellow ;
+$danger:        $red ;
+$light:         #f1f1f1 ;
+$dark:          #23282d ;
+
+$colors: ();
+$colors: map-merge(
+  (
+    "blue":       $blue,
+    "indigo":     $indigo,
+    "purple":     $purple,
+    "pink":       $pink,
+    "red":        $red,
+    "orange":     $orange,
+    "yellow":     $yellow,
+    "green":      $green,
+    "teal":       $teal,
+    "cyan":       $cyan,
+    "white":      $white,
+    "gray":       $gray-600,
+    "gray-dark":  $gray-800
+  ),
+  $colors
+);
+
+$theme-colors: ();
+$theme-colors: map-merge(
+  (
+    "primary":    $primary,
+    "secondary":  $secondary,
+    "success":    $success,
+    "info":       $info,
+    "warning":    $warning,
+    "danger":     $danger,
+    "light":      $light,
+    "dark":       $dark
+  ),
+  $theme-colors
+);
+
+$body-color: #32373c;
+
+// buttons 
+$btn-border-radius: 3px;
+
+// link 
+$link-color: $blue;
+ 
+// card
+$card-border-radius: 0;
+
+// table
+$table-bg: #fff;
+$table-accent-bg: #f9f9f9;
+$table-border-width: 0;
+
