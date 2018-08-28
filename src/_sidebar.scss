@@ -1,0 +1,67 @@
+$field-heght: 40px;
+
+@mixin sidebar-item() {
+    width: 100%;
+    color: $secondary;
+    justify-content: start;
+    align-items: center;
+    display: inline-flex;
+    min-height: $field-heght;  
+}
+
+.sidebar {
+  flex-direction: column;
+  display: flex;
+  background: $dark;
+
+  &__icon {
+    margin-right: 10px;
+  }
+
+  &__list {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  &__link {
+    padding: 0 10px;
+    cursor: pointer;
+    @include sidebar-item();
+
+    &:hover {
+      text-decoration: none;
+      background: darken($dark, 5%);
+      color: $primary;
+    }
+
+     &_active { 
+      background: $blue;
+      color: #fff;
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: $field-heght / 4;
+        right: 0;
+        border: $field-heght / 4 solid transparent;
+        border-right: $field-heght / 4 solid $main-background;
+      }      
+    }
+  }
+
+  &__field {
+    @include sidebar-item();
+    flex-wrap: wrap;   
+
+    & > .sidebar__list {
+        display: none;
+    }
+
+    & .sidebar__link_active + .sidebar__list {
+      background: $submenu-background;
+      display: block;
+    }
+  }
+}

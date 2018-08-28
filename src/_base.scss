@@ -1,51 +1,45 @@
+$sidebar-width: 12rem;
+$head-height: 40px;
 
-.wrapper {
-  display: flex;
-  flex-wrap: wrap;
+// body
+.grid {
+  display: grid;
+  grid-template-columns: $sidebar-width auto;
+  grid-template-rows: $head-height auto;
 }
-
-$sidebar-width: 200px;
-$main-width: 600px;
-
-%main {
-  flex: 50 1 $main-width;
-}
-
-%sidebar {
-  flex: 1 1 $sidebar-width;
-}
-
-%card {
-  box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
-}
-
 
 .header {
-  background: lighten($dark, 4%);
-  @extend %sidebar;
+  background: lighten($dark, 5%);
+  justify-content: center;
+  align-items: center;
+  display: inline-flex;
+  color: $secondary;
+  min-height: $head-height;
+  
+
+  &__link {
+    color: $secondary;
+    cursor: pointer;
+
+    &:hover {
+      color: $primary;
+      text-decoration: none;
+    }
+  }
 }
 
 .nav {
-  background: lighten($dark, 6%);
-  @extend %main;
-}
-
-.sidebar {
-  background: $dark;
-  @extend %sidebar;
+  min-height: $head-height;
+  background: darken($dark, 1%);
 }
 
 .main {
-  min-height: 90vh;
-  background: $light;
+  overflow-y: auto;
+  background: $main-background;
   padding: 10px;
-  @extend %main;
 }
 
-.footer {
-  background: lighten($dark, 8%);
-}
-
+// nav
 .nav-link {
   color: $secondary;
 
@@ -55,36 +49,15 @@ $main-width: 600px;
   }
 }
 
-.sidebar {
-  flex-direction: column;
-  display: flex;
-
-  &__link {
-    display: inline-flex;
-    width: 100%;
-    height: 50px;  
-    color: $secondary;
-    justify-content: center;
-    align-items: center;
-
-    &:hover {
-      text-decoration: none;
-      background: darken($dark, 5%);
-      color: $primary;
-    }
-  }
-}
-
-
-
+// button
 @each $color, $value in $theme-colors {
   .btn-#{$color} {
     border-bottom: 3px solid;
-    border-color: darken($value, 15%);
+    border-color: darken($value, 5%);
     
     &:hover {
-      border-color: darken($value, 20%);
-      background: $value;
+      border-color: darken($value, 10%);
+      background: darken($value, 5%);
     }
   }
 }
@@ -93,6 +66,7 @@ $main-width: 600px;
   @extend %card;
 }
 
+// tablle
 .table {
   @extend %card;
 
@@ -104,3 +78,5 @@ $main-width: 600px;
     border-top: 1px solid $table-border-color;
   }
 }
+
+

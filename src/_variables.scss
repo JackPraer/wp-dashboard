@@ -9,7 +9,7 @@ $green:   #46b450 ;
 $teal:    #20c997 ;
 $cyan:    #00b9eb ;
 
-$primary:       #0085ba;
+$primary:       #008ec2;
 $secondary:     #9ca1a6;
 $success:       $green;
 $info:          $cyan ;
@@ -53,10 +53,12 @@ $theme-colors: map-merge(
   $theme-colors
 );
 
+// body
 $body-color: #32373c;
 
 // buttons 
 $btn-border-radius: 3px;
+$btn-padding-x: 4rem;
 
 // link 
 $link-color: $blue;
@@ -68,4 +70,16 @@ $card-border-radius: 0;
 $table-bg: #fff;
 $table-accent-bg: #f9f9f9;
 $table-border-width: 0;
+
+// sidebar 
+$submenu-background: #32373c;
+
+// main
+$main-background: $light;
+
+// card 
+%card {
+  box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+  border: 1px solid rgba(0, 0, 0, 0.125);
+}
 

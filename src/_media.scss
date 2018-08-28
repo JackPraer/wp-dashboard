@@ -1,0 +1,28 @@
+@media screen and (max-width: 960px) {
+  .grid {
+    grid-template-columns: 3rem auto;
+  }
+
+  .header, .sidebar {
+    font-size: 0;
+  }
+
+  .sidebar__field  .sidebar__link_active + .sidebar__list {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .grid {
+    display: flex;
+    flex-flow: column;
+  }
+
+  .header, .sidebar {
+    font-size: 1rem;;
+  }
+
+  .sidebar__field  .sidebar__link_active + .sidebar__list {
+    display: none;
+  }
+}

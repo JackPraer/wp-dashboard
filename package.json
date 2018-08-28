@@ -5,18 +5,23 @@
   "license": "MIT",
   "devDependencies": {
     "autoprefixer": "^9.0.0",
-    "bootstrap": "^4.1.3",
     "css-loader": "^1.0.0",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "file-loader": "^2.0.0",
     "lost": "^8.3.0",
+    "node-sass": "^4.9.2",
     "postcss-advanced-variables": "^2.3.3",
     "postcss-cli": "^6.0.0",
+    "postcss-font-grabber": "^2.0.1",
+    "postcss-font-magician": "^2.2.1",
+    "postcss-fontpath": "^1.0.0",
     "postcss-import": "^11.1.0",
     "postcss-loader": "^2.1.6",
     "postcss-nested": "^3.0.0",
     "postcss-preset-env": "^5.3.0",
     "postcss-property-lookup": "^2.0.0",
     "precss": "^3.1.2",
+    "sass-loader": "^7.0.3",
     "style-loader": "^0.21.0",
     "stylelint": "^9.3.0",
     "stylelint-config-standard": "^18.2.0",
@@ -33,8 +38,8 @@
     "npm": ">= 5.0.0"
   },
   "dependencies": {
-    "node-sass": "^4.9.2",
-    "normalize.css": "^8.0.0",
-    "sass-loader": "^7.0.3"
+    "bootstrap": "^4.1.3",
+    "dashicons": "https://github.com/WordPress/dashicons.git",
+    "normalize.css": "^8.0.0"
   }
 }

@@ -1,10 +1,11 @@
+
 // Required
 @import "../node_modules/bootstrap/scss/functions";
 @import "../node_modules/bootstrap/scss/variables";
 @import "../node_modules/bootstrap/scss/mixins";
 
 // customize
-@import "customize";
+@import "./variables";
 
 // Optional
 @import "../node_modules/bootstrap/scss/reboot";
@@ -44,4 +45,14 @@
 // theme 
 @import './base';
 
+// callout
 @import './callout';
+
+// sidebar
+@import './sidebar';
+
+// media query
+@import './media';
+
+//icon
+@import "../node_modules/dashicons/icon-font/css/dashicons.css";

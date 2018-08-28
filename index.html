@@ -8,44 +8,62 @@
   </script>
 </head>
 <body>
-  <div class="wrapper">
+  <div class="grid">
     <header class="header">
-        asd
+      <a class="header__link" href="">  <i class="dashicons dashicons-admin-home"></i> Home</a>
     </header>
 
     <nav class="nav">
-      <a class="nav-link active" href="#">Active</a>
-      <a class="nav-link" href="#">Link</a>
-      <a class="nav-link" href="#">Link</a>
-      <a class="nav-link disabled" href="#">Disabled</a>
+        <a class="nav-link active" href="#">Active</a>
+        <a class="nav-link" href="#">Link</a>
+        <a class="nav-link" href="#">Link</a>
+        <a class="nav-link mr-auto" href="#">Disabled</a>
+        <a class="nav-link" href="#">Disabled</a>
     </nav>
 
-  </div>
-  
-  <div class="wrapper">
+    <aside class="sidebar">
+        <ul class="sidebar__list">
+          <li class="sidebar__field">
+            <a class="sidebar__link" href=""> 
+              <i class="sidebar__icon dashicons dashicons-dashboard"></i>
+              Console 
+            </a>
+          </li>
+          <li class="sidebar__field ">
+            <a class="sidebar__link sidebar__link_active" href=""> 
+              <i class="sidebar__icon dashicons dashicons-admin-page"></i>
+              Posts 
+            </a>
+            <ul class="sidebar__list">
+              <li class="sidebar__link ">asdasd</li>
+              <li class="sidebar__link ">asdasd</li>
+            </ul>
+          </li>
+          <li class="sidebar__link">
+            <i class="sidebar__icon dashicons dashicons-admin-comments"></i>
+            Comments
+          </li>
+          <li class="sidebar__link ">
+            <i class="sidebar__icon dashicons dashicons-admin-plugins"></i>
+            Plugins
+          </li>
+        </ul>
+      </aside>
 
-      <aside class="sidebar">
-          <a href="" class="sidebar__link">asda sd</a>
-          <a href="" class="sidebar__link">asd asd</a>
-          <a href="" class="sidebar__link">asd asd</a>
-          <a href="" class="sidebar__link">asd asd</a>
-          <a href="" class="sidebar__link">asdas</a>
-      </aside> 
+      <main class="main">
+        <div class="mb-3">
+          <button type="button" class="btn btn-primary">Primary</button>
+          <button type="button" class="btn btn-secondary">Secondary</button>
+          <button type="button" class="btn btn-success">Success</button>
+          <button type="button" class="btn btn-danger">Danger</button>
+          <button type="button" class="btn btn-warning">Warning</button>
+          <button type="button" class="btn btn-info">Info</button>
+          <button type="button" class="btn btn-light">Light</button>
+          <button type="button" class="btn btn-dark">Dark</button>
 
-      <main class="main col">
-        
-        <button type="button" class="btn btn-primary">Primary</button>
-        <button type="button" class="btn btn-secondary">Secondary</button>
-        <button type="button" class="btn btn-success">Success</button>
-        <button type="button" class="btn btn-danger">Danger</button>
-        <button type="button" class="btn btn-warning">Warning</button>
-        <button type="button" class="btn btn-info">Info</button>
-        <button type="button" class="btn btn-light">Light</button>
-        <button type="button" class="btn btn-dark">Dark</button>
-
-        <button type="button" class="btn btn-link">Link</button>
-
-        <div class="card" style="width: 18rem;">
+          <button type="button" class="btn btn-link">Link</button>
+        </div>
+        <div class="card mb-3">
           <div class="card-body">
             <h5 class="card-title">Название карточки</h5>
             <h6 class="card-subtitle mb-2 text-muted">Подзаголовок карты</h6>
@@ -55,7 +73,7 @@
           </div>
         </div>
 
-        <table class="table table-striped">
+        <table class="table table-striped mb-3">
           <thead>
             <tr>
               <th scope="col">#</th>
@@ -122,15 +140,8 @@
           <h4>hello</h4>
           <p>asdasd</p>
         </div>
-
       </main>
-
   </div>
 
-  <footer class="footer col">
-          footer
-  </footer>
-
-  
 </body>
 </html>

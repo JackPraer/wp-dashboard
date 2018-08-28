@@ -16,8 +16,12 @@ module.exports = {
             fallback: 'style-loader',
             use: [
               { loader: 'css-loader', options: { importLoaders: 1 } },
+              {
+                loader: "postcss-loader",
+                options: {config: {path: 'postcss.config.js'}}
+              },
               'sass-loader',
-              'postcss-loader'
+
             ]
           })
         // use: ExtractTextPlugin.extract({
@@ -39,6 +43,12 @@ module.exports = {
         // })
 
 
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        use: [
+            'file-loader'
+        ]
       },
       
     ]
